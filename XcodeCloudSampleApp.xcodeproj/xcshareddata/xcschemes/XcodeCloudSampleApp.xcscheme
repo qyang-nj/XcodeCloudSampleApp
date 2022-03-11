@@ -20,6 +20,20 @@
                ReferencedContainer = "container:XcodeCloudSampleApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F555FF2427DBCA2900A6A2B4"
+               BuildableName = "XcodeCloudSampleAppTests.xctest"
+               BlueprintName = "XcodeCloudSampleAppTests"
+               ReferencedContainer = "container:XcodeCloudSampleApp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
