@@ -134,10 +134,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F555FF3927DBCA2900A6A2B4 /* Build configuration list for PBXNativeTarget "XcodeCloudSampleApp" */;
 			buildPhases = (
+				F555FF4227DBD2ED00A6A2B4 /* Log tooling versions */,
 				F555FF1127DBCA2800A6A2B4 /* Sources */,
 				F555FF1227DBCA2800A6A2B4 /* Frameworks */,
 				F555FF1327DBCA2800A6A2B4 /* Resources */,
-				F555FF4227DBD2ED00A6A2B4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -254,7 +254,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		F555FF4227DBD2ED00A6A2B4 /* ShellScript */ = {
+		F555FF4227DBD2ED00A6A2B4 /* Log tooling versions */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -263,13 +263,14 @@
 			);
 			inputPaths = (
 			);
+			name = "Log tooling versions";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nruby --version\nxcodebuild -version\nswiftc -version\n";
+			shellScript = "echo \"## Xcode\" && xcodebuild -version\necho \"## Swift\" && swiftc -version\necho \"## Ruby\" && ruby --version\necho \"## Python\" && python --version\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
