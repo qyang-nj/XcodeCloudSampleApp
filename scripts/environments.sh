@@ -8,6 +8,9 @@ function show_delimiter {
     echo "----------"
 }
 
+log_and_run system_profiler SPHardwareDataType
+show_delimiter
+
 log_and_run uname -a
 show_delimiter
 
