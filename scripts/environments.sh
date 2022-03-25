@@ -8,10 +8,10 @@ function show_delimiter {
     echo "----------"
 }
 
-echo "## All environment variables:" && env
+log_and_run uname -a
 show_delimiter
 
-log_and_run uname -a
+log_and_run sw_vers
 show_delimiter
 
 log_and_run xcodebuild -version
