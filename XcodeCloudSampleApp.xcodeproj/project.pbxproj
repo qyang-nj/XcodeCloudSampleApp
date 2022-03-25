@@ -134,7 +134,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F555FF3927DBCA2900A6A2B4 /* Build configuration list for PBXNativeTarget "XcodeCloudSampleApp" */;
 			buildPhases = (
-				F555FF4227DBD2ED00A6A2B4 /* Log tooling versions */,
+				F555FF4227DBD2ED00A6A2B4 /* Show environments */,
 				F555FF1127DBCA2800A6A2B4 /* Sources */,
 				F555FF1227DBCA2800A6A2B4 /* Frameworks */,
 				F555FF1327DBCA2800A6A2B4 /* Resources */,
@@ -254,7 +254,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		F555FF4227DBD2ED00A6A2B4 /* Log tooling versions */ = {
+		F555FF4227DBD2ED00A6A2B4 /* Show environments */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -263,14 +263,14 @@
 			);
 			inputPaths = (
 			);
-			name = "Log tooling versions";
+			name = "Show environments";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"## Xcode\" && xcodebuild -version\necho \"## Swift\" && swiftc -version\necho \"## Ruby\" && ruby --version\necho \"## Python\" && python --version\necho \"## Java\" && which java\n";
+			shellScript = "$PROJECT_DIR/scripts/environments.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
