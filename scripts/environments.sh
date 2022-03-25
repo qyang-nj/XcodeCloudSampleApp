@@ -1,18 +1,31 @@
 #!/bin/bash
+function log_and_run {
+    echo "> $@"
+    $@
+}
+
+function show_delimiter {
+    echo "----------"
+}
+
 echo "## All environment variables:" && env
-echo "----------"
+show_delimiter
 
-echo "## Xcode version:" && xcodebuild -version
-echo "----------"
+log_and_run uname -a
+show_delimiter
 
-echo "## Swift version:" && swiftc -version
-echo "----------"
+log_and_run xcodebuild -version
+show_delimiter
 
-echo "## Ruby version:" && ruby --version
-echo "----------"
+log_and_run swiftc -version
+show_delimiter
 
-echo "## Python version:" && python --version; python3 --version
-echo "----------"
+log_and_run ruby --version
+show_delimiter
 
-echo "## Java version:" &&  which java && java -version
-echo "----------"
+log_and_run python --version
+log_and_run python3 --version
+show_delimiter
+
+log_and_run which java && log_and_run java -version
+show_delimiter
